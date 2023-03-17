@@ -12,9 +12,9 @@ function App() {
         <TodoComponent/>
       </Flex>
 
-      {/* <Button bg="whiteAlpha.600" position="absolute" zIndex={1000} right="10px" top="10px" onClick={toggleColorMode}>
+      <Button bg="whiteAlpha.600" position="absolute" zIndex={1000} left="10px" top="10px" onClick={toggleColorMode}>
         <Icon color="blackAlpha.700" as={colorMode === "dark" ? MoonIcon : SunIcon}/>
-      </Button> */}
+      </Button>
     </Box>
   )
 }
