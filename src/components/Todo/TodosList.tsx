@@ -1,11 +1,11 @@
 import { Text, useColorMode, Flex, Card, Heading, Divider, CardHeader, CardBody, IconButton, Box, useDisclosure} from "@chakra-ui/react"
 import { Todo } from "types"
 import {useTodosStore} from "store"
-import { List } from 'antd';
+import { Empty, List } from 'antd';
 import AlertComponent from "components/AlertComponent";
 import { useState } from "react";
 import {useCapitalize} from "hooks"
-
+import { RiFileForbidLine } from "react-icons/ri"
 import  {MenuComponent, MenuOptions } from "components/MenuComponent";
 
 
@@ -55,10 +55,17 @@ export default function TodoList() {
       />
 
       <List
-        style={{width:"100%"}}
+        style={{width:"100%", color: "white"}}
+        locale={{ emptyText: (<>
+          <Text fontSize="4xl" fontWeight="bold"  >No data</Text>
+          <Flex>
+            <RiFileForbidLine size="lg"/>
+          </Flex>
+        </>)}}
         dataSource={todos}
         renderItem={(todo:Todo) => (
           <List.Item>
+
             <Card minW="100%">
 
               <CardHeader>
@@ -77,6 +84,7 @@ export default function TodoList() {
               </CardBody>
 
             </Card>
+            
           </List.Item>
         )}
       />
