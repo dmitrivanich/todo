@@ -12,8 +12,8 @@ function App() {
         <TodoComponent/>
       </Flex>
 
-      <Button bg="whiteAlpha.600" position="absolute" zIndex={1000} left="10px" top="10px" onClick={toggleColorMode}>
-        <Icon color="blackAlpha.700" as={colorMode === "dark" ? MoonIcon : SunIcon}/>
+      <Button bg="none" position="absolute" zIndex={1000} left="10px" top="10px" onClick={toggleColorMode}>
+        <Icon color="blackAlpha.800" as={colorMode === "dark" ? SunIcon : MoonIcon }/>
       </Button>
     </Box>
   )
