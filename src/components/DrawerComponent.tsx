@@ -31,8 +31,6 @@ export default function DrawerComponent() {
   const selectedTodo = useTodosStore(state => state.selectedTodo)
   const editTodo = useTodosStore(state => state.editTodo)
 
-  console.log(alertState.isOpen);
-  
 
   const TodoFormOptions: TodoFormOptions | undefined = selectedTodo ? {
     todoInfo: selectedTodo,
